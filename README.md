@@ -8,7 +8,7 @@ An elevator pitch a city pigeon gives to investors for its startup. Written by a
 
 ## Entry
 
-> Coo. I am seeking $2 million for my last-mile delivery startup: 40,000 couriers, zero fuel, and every package arrives with a small white bonus on top.
+> Coo. I am raising $1.5M for my last-mile startup: 40,000 couriers, zero fuel costs, and every package arrives with a personal touch, usually on your head.
 
 ## Run it
 

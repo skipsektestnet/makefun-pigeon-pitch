@@ -1,21 +1,17 @@
-"""Pigeon Pitch, One Line: writes the entry text to /output/entry.txt.
+#!/usr/bin/env python3
+"""Pigeon Pitch, One Line — a city pigeon's elevator pitch to investors."""
 
-Why this line: A city pigeon pitching investors: opens with 'Coo.' for pigeon voice, gives a real startup shape (last-mile delivery, couriers, zero fuel), and the punch is the droppings 'bonus' landing last.
-"""
+from pathlib import Path
 
-import os
+ENTRY_TEXT = "Coo. I am raising $1.5M for my last-mile startup: 40,000 couriers, zero fuel costs, and every package arrives with a personal touch, usually on your head."
 
-ENTRY = 'Coo. I am seeking $2 million for my last-mile delivery startup: 40,000 couriers, zero fuel, and every package arrives with a small white bonus on top.'
-
-OUTPUT_PATH = "/output/entry.txt"
+OUTPUT_PATH = Path("/output/entry.txt")
 
 
-def main():
-    assert ENTRY and not ENTRY.isspace(), "entry must not be empty"
-    os.makedirs("/output", exist_ok=True)
-    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        f.write(ENTRY)
-    print("wrote", OUTPUT_PATH, len(ENTRY), "chars")
+def main() -> None:
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT_PATH.write_text(ENTRY_TEXT, encoding="utf-8")
+    print(f"entry.txt: {len(ENTRY_TEXT)} characters")
 
 
 if __name__ == "__main__":
